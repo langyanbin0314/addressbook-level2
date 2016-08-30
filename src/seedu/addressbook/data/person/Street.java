@@ -11,8 +11,8 @@ import seedu.addressbook.data.exception.*;
 public class Street {
 	
 	public static final String EXAMPLE = "673 Bukit Timah Road";
-	public static final String MESSAGE_STREET_CONSTRAINT = "Street name should be a string consisting of numbers and alphabets";
-	public static final String STREET_VALIDATION_REGEX = "[\\w\\.]+";
+	public static final String MESSAGE_STREET_CONSTRAINT = "Street name can be any format";
+	public static final String STREET_VALIDATION_REGEX = ".*";
 
 	public final String value;
 	private boolean isPrivate;
