@@ -29,7 +29,12 @@ public class Address {
         if (!isValidAddress(address)) {
             throw new IllegalValueException(MESSAGE_ADDRESS_CONSTRAINTS);
         }
+        String[] newAddress = address.split(", ");
         this.value = address;
+        this.block = new Block(newAddress[0], isPrivate);
+        this.street = new Street(newAddress[1], isPrivate);
+        this.unit = new Unit(newAddress[2], isPrivate);
+        this.postalCode = new PostalCode(newAddress[3], isPrivate);
     }
 
     /**
