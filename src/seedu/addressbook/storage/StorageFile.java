@@ -3,12 +3,14 @@ package seedu.addressbook.storage;
 import seedu.addressbook.data.AddressBook;
 import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.storage.jaxb.AdaptedAddressBook;
+import seedu.addressbook.ui.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -144,5 +146,14 @@ public class StorageFile {
     public String getPath() {
         return path.toString();
     }
+    
+    /**
+     * 
+     * @return true if the file exists
+     */
+	public boolean isFileExist() {
+		// TODO Auto-generated method stub
+		return Files.exists(path);
+	}
 
 }

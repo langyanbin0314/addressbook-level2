@@ -8,6 +8,7 @@ import seedu.addressbook.data.person.ReadOnlyPerson;
 
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -35,6 +36,8 @@ public class TextUi {
 
     /** Format of a comment input line. Comment lines are silently consumed when reading user input. */
     private static final String COMMENT_LINE_FORMAT_REGEX = "#.*";
+
+	private static final String FILE_NOT_FOUND = "File not found.";
 
     private final Scanner in;
     private final PrintStream out;
@@ -165,5 +168,11 @@ public class TextUi {
     private static String getIndexedListItem(int visibleIndex, String listItem) {
         return String.format(MESSAGE_INDEXED_LIST_ITEM, visibleIndex, listItem);
     }
+
+	public void showFileNotFound() {
+		// TODO Auto-generated method stub
+		showToUser(FILE_NOT_FOUND);
+		
+	}
 
 }
