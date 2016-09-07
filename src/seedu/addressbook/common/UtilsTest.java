@@ -7,10 +7,17 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+/**
+ * 
+ * JUnit tests for the Utils class
+ *
+ */
+
+
 public class UtilsTest {
 
 	@Test
-	public void isAnyNUll_hasNull() {
+	public void isAnyNUll_hasNull_returnTrue() {
 		Object o1 = null;
 		Object o2 = new Object();
 		
@@ -19,7 +26,7 @@ public class UtilsTest {
 	}
 	
 	@Test
-	public void isAnyNull_noNull() {
+	public void isAnyNull_noNull_returnFalse() {
 		Object o1 = new Object();
 		Object o2 = new Object();
 		
@@ -28,7 +35,7 @@ public class UtilsTest {
 	
 	
 	@Test
-	public void areElementsUnique_unique() {
+	public void areElementsUnique_unique_returnTrue() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
@@ -37,7 +44,7 @@ public class UtilsTest {
 	}
 	
 	@Test
-	public void areElementsUnique_notUnique() {
+	public void areElementsUnique_notUnique_returnFalse() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
