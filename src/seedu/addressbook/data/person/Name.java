@@ -43,6 +43,19 @@ public class Name {
     public List<String> getWordsInName() {
         return Arrays.asList(fullName.split("\\s+"));
     }
+    
+    public boolean isSimilar(Name name) {
+    	if (name == null || !this.fullName.toLowerCase().equals(name.fullName.toLowerCase())) {
+    		return false;
+    	}
+    	
+    	if (this.toString().toLowerCase().equals(name.toString().toLowerCase())) {
+    		return true;
+    	}
+    	
+    	return false;
+    }
+
 
     @Override
     public String toString() {
